@@ -1,0 +1,68 @@
+body { 
+  font-family: Arial, sans-serif; 
+  margin: 0; 
+  padding: 0; 
+  line-height: 1.6; 
+  background: #f9f9f9; 
+  color: #333; 
+} 
+ 
+header { 
+  background: #004080; 
+  color: white; 
+  padding: 20px; 
+  text-align: center; 
+} 
+ 
+header h1 { 
+  margin: 0; 
+} 
+ 
+nav a { 
+  color: white; 
+  margin: 0 15px; 
+  text-decoration: none; 
+} 
+ 
+nav a:hover { 
+  text-decoration: underline; 
+} 
+ 
+section { 
+  padding: 40px 20px; 
+  border-bottom: 1px solid #ddd; 
+} 
+ 
+section h2 { 
+  color: #004080; 
+} 
+ 
+.team-grid { 
+  display: flex; 
+  gap: 20px; 
+  flex-wrap: wrap; 
+} 
+ 
+.member { 
+  flex: 1 1 200px; 
+  background: white; 
+  padding: 15px; 
+  border: 1px solid #ccc; 
+  text-align: center; 
+  border-radius: 8px; 
+} 
+ 
+.member img { 
+  width: 100px; 
+  height: 100px; 
+  border-radius: 50%; 
+  object-fit: cover; 
+} 
+ 
+footer { 
+  background: #222; 
+  color: white; 
+  text-align: center; 
+  padding: 15px; 
+} 
+ 
