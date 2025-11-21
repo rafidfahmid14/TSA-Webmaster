@@ -97,6 +97,16 @@ nav a:hover {
   color: #ffcc00; /* new accent color */
   transform: scale(1.1); /* small bounce effect */
 }
+section {
+  padding: 40px 20px;
+  border-bottom: 1px solid #ddd;
+
+  /* new */
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+
 
 
 
