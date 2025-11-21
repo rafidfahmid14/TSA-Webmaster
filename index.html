@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your TSA Webmaster Site</title>
+    <title>TSA Webmaster Project</title>
 
     <!-- External CSS -->
     <link rel="stylesheet" href="styles.css">
@@ -13,23 +13,25 @@
     <!-- Navigation Bar -->
     <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="topic.html">Topic</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#topic">Topic</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero">
+    <header id="home" class="hero">
         <h1>Welcome to Our TSA Webmaster Project</h1>
         <p>Created by the [Team Name] team.</p>
-        <a href="topic.html" class="cta-button">Explore Our Topic</a>
+        <a href="#topic" class="cta-button">Explore Our Topic</a>
     </header>
 
     <!-- Main Content -->
     <main>
-        <section>
+        <!-- About Section -->
+        <section id="about">
             <h2>About Our Site</h2>
             <p>
                 This website was created for the TSA Webmaster competition. Our project explores:
@@ -37,14 +39,42 @@
             </p>
         </section>
 
-        <section>
+        <!-- Topic Section -->
+        <section id="topic">
             <h2>What You'll Find</h2>
             <ul>
                 <li>Research and analysis of the topic</li>
-                <li>Interactive features</li>
-                <li>Useful resources</li>
+                <li>Interactive features (JS, charts, or sliders)</li>
+                <li>Useful resources and references</li>
                 <li>Our process and team information</li>
             </ul>
+        </section>
+
+        <!-- Team Section -->
+        <section id="team">
+            <h2>Meet Our Team</h2>
+            <div class="team-grid">
+                <!-- Teammates add member cards here -->
+                <div class="member">
+                    <img src="[image1.jpg]" alt="[Member Name]">
+                    <h3>[Member Name]</h3>
+                    <p>[Role / Fun fact]</p>
+                </div>
+                <div class="member">
+                    <img src="[image2.jpg]" alt="[Member Name]">
+                    <h3>[Member Name]</h3>
+                    <p>[Role / Fun fact]</p>
+                </div>
+                <!-- Add more members as needed -->
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Email: <a href="mailto:[teamemail@example.com]">[teamemail@example.com]</a></p>
+            <p>Phone: [Insert phone number]</p>
+            <p>Socials: [Add links or icons]</p>
         </section>
     </main>
 
