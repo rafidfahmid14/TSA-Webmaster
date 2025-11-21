@@ -65,4 +65,8 @@ footer { 
   text-align: center; 
   padding: 15px; 
 } 
+nav a.active {
+  border-bottom: 2px solid #fff;
+  padding-bottom: 2px;
+}
  
