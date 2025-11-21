@@ -86,5 +86,18 @@ nav a.active {
   transform: translateY(-5px);
   box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.3s; /* new */
+}
+
+nav a:hover {
+  color: #ffcc00; /* new accent color */
+  transform: scale(1.1); /* small bounce effect */
+}
+
+
 
 
