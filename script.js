@@ -1,4 +1,4 @@
-// Simple welcome message
+// Simple welcome message 
 document.addEventListener("DOMContentLoaded", () => {
     console.log("CityCare site loaded successfully!");
 
@@ -35,15 +35,3 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
-nav a.active {
-    color: #2d89ff;
-    font-weight: bold;
-    border-bottom: 2px solid #2d89ff;
-}
-
-
-
-
-
-
-
