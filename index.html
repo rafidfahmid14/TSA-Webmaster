@@ -72,14 +72,93 @@
                     </p>
                 </div>
                 <!-- Highlight #3 -->
-                    <h3>...</h3>
+                    <h3>Fort Bend Hope</h3>
                     <p>
                         ...
                     </p>
                 </div>
             </div>
         </section>
+        
+<!-- Community Resource Hub Section -->
+<section id="resource-hub">
+    <h2>Community Resource Hub</h2>
+    <p>Search and filter local organizations offering support and services.</p>
 
+    <!-- Search & Filter Controls -->
+    <div class="resource-controls">
+        <input 
+            type="text" 
+            id="searchInput" 
+            placeholder="Search resources by name or description..."
+        >
+
+        <select id="categoryFilter">
+            <option value="all">All Categories</option>
+            <option value="Health">Health</option>
+            <option value="Housing">Housing</option>
+            <option value="Food">Food</option>
+            <option value="Youth">Youth</option>
+            <option value="Family">Family</option>
+        </select>
+    </div>
+
+    <!-- Resource Directory Table -->
+    <table class="resource-table" id="resourceTable">
+        <thead>
+            <tr>
+                <th>Organization Name</th>
+                <th>Category</th>
+                <th>Description</th>
+                <th>Address</th>
+                <th>Phone</th>
+                <th>Hours</th>
+                <th>Website</th>
+                <th>Cost</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <!-- RESOURCE 1 -->
+            <tr data-category="Food">
+                <td>Rosenberg Richmond Helping Hands</td>
+                <td>Food</td>
+                <td>Provides clothing and food assistance.</td>
+                <td>902 Collins Rd, Richmond, TX 77469</td>
+                <td>(281) 232-4904</td>
+                <td>Mon–Thurs, 9:30 AM - 1:30 PM</td>
+                <td><a href="https://www.roserichhelpinghands.org/" target="_blank">Visit</a></td>
+                <td>Free</td>
+            </tr>
+
+            <!-- RESOURCE 2 -->
+            <tr data-category="Housing">
+                <td>Ballard House</td>
+                <td>Housing</td>
+                <td>Temporary housing and family support services.</td>
+                <td>21421 Cinco Park Rd, Katy, TX 77450</td>
+                <td>(281) 717-4670</td>
+                <td>24/7</td>
+                <td><a href="https://www.theballardhouse.org/" target="_blank">Visit</a></td>
+                <td>Free</td>
+            </tr>
+
+            <!-- RESOURCE 3 -->
+            <tr data-category="Education">
+                <td>Fort Bend Hope</td>
+                <td>Health</td>
+                <td>Low-cost medical and mental health services.</td>
+                <td>927 3rd St, Rosenberg, TX 77471</td>
+                <td>(346) 702-3806</td>
+                <td>Mon–Fri, 7:30 AM - 3 PM</td>
+                <td><a href="https://fortbendhope.org/" target="_blank">Visit</a></td>
+                <td>Free</td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+        
         <!-- Community Section -->
         <section id="community">
             <h2>Community Impact</h2>
@@ -137,6 +216,7 @@
     <script src="scripts.js"></script>
 </body>
 </html>
+
 
 
 
