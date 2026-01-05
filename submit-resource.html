@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CityCare | Submit a Resource</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+  
+<body>
+   
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resource-hub.html">Resource Hub</a></li>
+        <li><a href="submit-resource.html" class="active">Submit a Resource</a></li>
+    </ul>
+</nav>
+   
+<header class="hero small-hero">
+    <h1>Submit a Community Resource</h1>
+    <p>Help us expand our directory by sharing helpful organizations.</p>
+</header>
+   
+<main>
+        <section id="submit-resource">
+            <h2>Submit a New Community Resource</h2>
+            <form>
+                <label>Organization Name:<input type="text" required></label>
+                <label>Category:<input type="text" required></label>
+                <label>Short Description:<input type="text" maxlength="200" required></label>
+                <label>Full Description:<textarea required></textarea></label>
+                <label>Address:<input type="text" required></label>
+                <label>Phone Number:<input type="tel" required></label>
+                <label>Email:<input type="email" required></label>
+                <label>Website:<input type="url"></label>
+                <label>Hours of Operation:<input type="text" required></label>
+                <label>Cost:
+                    <select>
+                        <option>Free</option>
+                        <option>Paid</option>
+                    </select>
+                </label>
+                <label>Who is it for? (youth, families, seniors, everyone):<input type="text" required></label>
+                <label>Accessibility Features:<input type="text"></label>
+                <button type="submit">Submit Resource</button>
+            </form>
+        </section>
+</main>
+   
+<footer>
+    <p>© 2025 CityCare</p>
+</footer>
+
+</body>
+</html>
