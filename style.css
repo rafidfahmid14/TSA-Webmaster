@@ -1,14 +1,18 @@
-/* Global Reset */ 
+/* --------------------------- */
+/* GLOBAL RESET */
+/* --------------------------- */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* Color Theme (CityCare Blue + Gold accent) */
+/* --------------------------- */
+/* COLOR THEME */
+/* --------------------------- */
 :root {
-  --primary: #004080;
-  --accent: #ffcc00;
+  --primary: #004080;      /* CityCare Blue */
+  --accent: #ffcc00;       /* Gold Accent */
   --text-dark: #333;
   --bg-light: #f5f7fa;
   --white: #ffffff;
@@ -17,6 +21,9 @@
   --shadow-hover: 0 8px 18px rgba(0,0,0,0.18);
 }
 
+/* --------------------------- */
+/* BODY STYLES */
+/* --------------------------- */
 body {
   font-family: "Inter", Arial, sans-serif;
   background: var(--bg-light);
@@ -24,43 +31,25 @@ body {
   line-height: 1.7;
 }
 
-/* HEADER */
-header {
+/* --------------------------- */
+/* NAVIGATION BAR */
+/* --------------------------- */
+nav {
   background: var(--primary);
-  color: var(--white);
+  padding: 15px 0;
   text-align: center;
-  padding: 35px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   box-shadow: var(--shadow);
 }
 
-header h1 {
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 1px;
+nav ul {
+  list-style: none;
 }
 
-/* CTA BUTTON */
-.cta-button {
+nav li {
   display: inline-block;
-  background: var(--accent);
-  color: var(--primary);
-  padding: 12px 25px;
-  margin-top: 15px;
-  font-weight: 600;
-  border-radius: var(--radius);
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.cta-button:hover {
-  background: var(--primary);
-  color: var(--accent);
-  transform: scale(1.05);
-}
-
-/* NAVIGATION */
-nav {
-  margin-top: 15px;
 }
 
 nav a {
@@ -82,7 +71,74 @@ nav a.active {
   padding-bottom: 3px;
 }
 
+/* --------------------------- */
+/* HERO SECTION */
+/* --------------------------- */
+
+header.hero {
+  background: var(--primary); /* solid color fallback */
+  background: linear-gradient(
+      rgba(0, 64, 128, 0.6), 
+      rgba(0, 64, 128, 0.6)
+    ),
+    url("hero-bg.jpg"); /* optional hero image */
+  background-size: cover;
+  background-position: center;
+  color: var(--primary);
+  text-align: center;
+  padding: 100px 25px;
+  border-radius: 0 0 var(--radius) var(--radius);
+  position: relative;
+}
+
+/* Make text stand out on dark/light backgrounds */
+header.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+header.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+/* CTA button inside hero */
+header.hero .cta-button {
+  font-size: 1rem;
+  padding: 15px 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+header.hero .cta-button:hover {
+  transform: scale(1.05);
+}
+
+/* --------------------------- */
+/* CTA BUTTON */
+/* --------------------------- */
+.cta-button {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--primary);
+  padding: 12px 25px;
+  margin-top: 15px;
+  font-weight: 600;
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: var(--primary);
+  color: var(--accent);
+  transform: scale(1.05);
+}
+
+/* --------------------------- */
 /* SECTIONS */
+/* --------------------------- */
 section {
   padding: 60px 25px;
   max-width: 1100px;
@@ -90,6 +146,7 @@ section {
   background: var(--white);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+  position: relative;
 }
 
 section h2 {
@@ -98,7 +155,42 @@ section h2 {
   margin-bottom: 20px;
 }
 
+/* ACCENT LINE FOR SECTIONS */
+section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 60px;
+  height: 4px;
+  background: var(--accent);
+  transform: translateX(-50%);
+  border-radius: 4px;
+}
+
+/* SERVICES LIST */
+section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+section ul li {
+  padding: 10px 0;
+  padding-left: 25px;
+  position: relative;
+}
+
+section ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: bold;
+}
+
+/* --------------------------- */
 /* TEAM GRID */
+/* --------------------------- */
 .team-grid {
   display: flex;
   gap: 25px;
@@ -135,7 +227,9 @@ section h2 {
   color: var(--primary);
 }
 
+/* --------------------------- */
 /* FOOTER */
+/* --------------------------- */
 footer {
   margin-top: 50px;
   background: #1c1c1c;
@@ -145,10 +239,16 @@ footer {
   font-size: 0.9rem;
 }
 
+/* --------------------------- */
 /* RESPONSIVE MOBILE DESIGN */
+/* --------------------------- */
 @media (max-width: 768px) {
   header h1 {
-    font-size: 1.6rem;
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
   }
 
   nav a {
@@ -164,4 +264,162 @@ footer {
     flex-direction: column;
     gap: 20px;
   }
+}
+
+/* RESOURCE HUB SECTION */
+#resource-hub {
+  background: var(--white);
+  padding: 60px 25px;
+  max-width: 1200px;
+  margin: 40px auto;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* Section title */
+#resource-hub h2 {
+  color: var(--primary);
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Search & Filter Controls */
+.resource-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.resource-controls input,
+.resource-controls select {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: var(--radius);
+  border: 1px solid #ccc;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.resource-controls input:focus,
+.resource-controls select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 8px rgba(0,64,128,0.3);
+}
+
+/* Resource Table */
+.resource-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 0.95rem;
+}
+
+.resource-table th,
+.resource-table td {
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.resource-table th {
+  background-color: var(--primary);
+  color: var(--white);
+  font-weight: 600;
+}
+
+.resource-table tbody tr:nth-child(even) {
+  background-color: var(--bg-light);
+}
+
+.resource-table tbody tr:hover {
+  background-color: rgba(0,64,128,0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.resource-table a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.resource-table a:hover {
+  color: var(--accent);
+}
+/* SUBMIT RESOURCE FORM */
+#submit-resource {
+  background: var(--white);
+  padding: 60px 25px;
+  max-width: 800px;
+  margin: 40px auto;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+#submit-resource h2 {
+  color: var(--primary);
+  font-size: 2rem;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* Form styling */
+#submit-resource form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+#submit-resource label {
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.95rem;
+}
+
+#submit-resource input,
+#submit-resource textarea,
+#submit-resource select {
+  padding: 10px 12px;
+  font-size: 1rem;
+  border-radius: var(--radius);
+  border: 1px solid #ccc;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+#submit-resource input:focus,
+#submit-resource textarea:focus,
+#submit-resource select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 8px rgba(0,64,128,0.3);
+}
+
+/* Textarea */
+#submit-resource textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Submit Button */
+#submit-resource button[type="submit"] {
+  background: var(--accent);
+  color: var(--primary);
+  padding: 12px 25px;
+  font-weight: 600;
+  border-radius: var(--radius);
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: all 0.3s ease;
+}
+
+#submit-resource button[type="submit"]:hover {
+  background: var(--primary);
+  color: var(--accent);
+  transform: scale(1.05);
 }
