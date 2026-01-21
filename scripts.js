@@ -1,4 +1,3 @@
-
 // Get DOM elements
 const searchInput = document.getElementById("searchInput");
 const categoryFilter = document.getElementById("categoryFilter");
@@ -30,4 +29,3 @@ function filterTable() {
 // Event listeners
 searchInput.addEventListener("input", filterTable);
 categoryFilter.addEventListener("change", filterTable);
-
