@@ -11,7 +11,7 @@
 /* COLOR THEME */
 /* --------------------------- */
 :root {
-  --primary: #004080;      /* CityCare Blue */
+  --primary: #004080;      /* Blue */
   --accent: #ffcc00;       /* Gold Accent */
   --text-dark: #333;
   --bg-light: #f5f7fa;
@@ -25,7 +25,7 @@
 /* BODY STYLES */
 /* --------------------------- */
 body {
-  font-family: "Inter", Arial, sans-serif;
+  font-family: "Inter", sans-serif;
   background: var(--bg-light);
   color: var(--text-dark);
   line-height: 1.7;
@@ -181,7 +181,7 @@ section ul li {
 }
 
 section ul li::before {
-  content: "✔";
+  content: "•";
   position: absolute;
   left: 0;
   color: var(--accent);
